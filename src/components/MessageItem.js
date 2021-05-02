@@ -2,11 +2,11 @@ import * as React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Moment from 'moment';
 
-const MessageItem = ({ item }) => {
+const MessageItem = ({ navigation, item }) => {
     Moment.locale('en');
 
     return (
-        <TouchableOpacity onPress={() => alert("Message detail page")} style={styles.wrapper}>
+        <TouchableOpacity onPress={() => navigation.navigate('MessageDetailView', { name: item.name })} style={styles.wrapper}>
             <View style={styles.imageWrapper}>
                 <Image
                     style={styles.image}
