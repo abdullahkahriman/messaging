@@ -28,7 +28,7 @@ const HomeView = () => {
             <TouchableOpacity onPress={() => alert("New message page")} style={styles.plusBtnWrapper}>
                 <Icon
                     name='plus'
-                    size={48}
+                    size={32}
                     type='feather'
                     color='#fff' />
             </TouchableOpacity>
@@ -57,8 +57,11 @@ const styles = StyleSheet.create({
     plusBtnWrapper: {
         backgroundColor: 'orange',
         position: 'absolute',
-        bottom: 20, right: 20, width: 64, height: 64,
-        borderRadius: 64,
+        bottom: 20,
+        right: 20,
+        width: 48,
+        height: 48,
+        borderRadius: 48,
         alignItems: 'center',
         justifyContent: 'center'
     }

@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         height: 40
     },
-
-})
+});
 
 export default Search;

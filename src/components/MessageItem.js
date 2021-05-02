@@ -11,7 +11,7 @@ const MessageItem = ({ item }) => {
                 <Image
                     style={styles.image}
                     source={{
-                        uri: 'https://reactnative.dev/img/tiny_logo.png',
+                        uri: 'https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png',
                     }}
                 />
             </View>
