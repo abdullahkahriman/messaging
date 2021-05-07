@@ -8,9 +8,11 @@ const MessageDetailItem = ({ navigation, item }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textDate}>{Moment(item.date).format('hh:mm')}</Text>
-            <View style={styles.itemWrapper}>
-                <Text style={styles.itemText}>{item.text}</Text>
-            </View>
+            <TouchableOpacity>
+                <View style={styles.itemWrapper}>
+                    <Text style={styles.itemText}>{item.text}</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -20,6 +22,8 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     textDate: {
+        color: 'gray',
+        fontSize: 12
     },
     itemWrapper: {
         backgroundColor: '#f1f1f1',

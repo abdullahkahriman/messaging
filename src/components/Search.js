@@ -10,7 +10,7 @@ const Search = () => {
                 size={32}
                 type='evilicon'
                 color='#666' />
-            <TextInput placeholder="412 messages" />
+            <TextInput placeholder="412 messages" style={styles.input} placeholderTextColor="#666" />
         </View>
     );
 }
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         height: 40
     },
+    input: {
+        color: '#666',
+        flex: 1
+    }
 });
 
 export default Search;
