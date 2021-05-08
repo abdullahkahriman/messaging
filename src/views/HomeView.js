@@ -18,7 +18,7 @@ const HomeView = ({ navigation }) => {
             <MessageItems navigation={navigation} />
 
             {/* Plus button */}
-            <TouchableOpacity onPress={() => alert("New message page")} style={styles.plusBtnWrapper}>
+            <TouchableOpacity onPress={() => navigation.push('NewMessageView')} style={styles.plusBtnWrapper}>
                 <Icon
                     name='plus'
                     size={32}

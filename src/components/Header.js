@@ -16,7 +16,8 @@ const Header = ({ text, isBack = false, navigation }) => {
             <Text style={[
                 styles.headerText,
                 {
-                    fontSize: !isBack ? 20 : 15
+                    fontSize: !isBack ? 20 : 15,
+                    fontWeight: !isBack ? 'bold' : 'normal',
                 }
             ]}>{text}</Text>
             {

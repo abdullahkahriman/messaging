@@ -23,12 +23,14 @@ const Search = () => {
                 onChangeText={val => ctx.setText(val)}
                 style={styles.input}
                 placeholderTextColor="#666" />
-            <Icon
-                name='close'
-                size={32}
-                onPress={() => clear()}
-                type='evilicon'
-                color='gray' />
+            {
+                ctx.text ? <Icon
+                    name='close'
+                    size={32}
+                    onPress={() => clear()}
+                    type='evilicon'
+                    color='gray' /> : null
+            }
         </View>
     );
 }

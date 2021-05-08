@@ -20,7 +20,7 @@ const MessageDetailItems = ({ route, navigation }) => {
 
     return (
         <View style={styles.container}>
-            {isLoading ? <ActivityIndicator size="large" color="#06bcee" /> : <FlatList data={data} renderItem={renderMessageList} keyExtractor={item => item.id} />}
+            {isLoading ? <ActivityIndicator size="large" color="#333" /> : <FlatList data={data} renderItem={renderMessageList} keyExtractor={item => item.id} />}
         </View>
     )
 }

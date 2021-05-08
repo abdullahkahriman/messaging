@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         flexDirection: 'row',
-        width: '100%',
         backgroundColor: '#fff',
-        paddingVertical: 10,
-        paddingHorizontal: 5,
+        width: '100%',
+        alignItems: 'center',
+        marginBottom: 5
     },
     textInput: {
         backgroundColor: '#fff',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     icon: {
         alignItems: 'center',
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
     }
 });
 
