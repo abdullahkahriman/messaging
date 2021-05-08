@@ -2,7 +2,15 @@ import * as React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements'
 
+import { MainContext } from '../provider/MainProvider'
+
 const Search = () => {
+    const ctx = React.useContext(MainContext);
+
+    const clear = () => {
+        ctx.setText('');
+    }
+
     return (
         <View style={styles.wrapper}>
             <Icon
@@ -10,7 +18,17 @@ const Search = () => {
                 size={32}
                 type='evilicon'
                 color='#666' />
-            <TextInput placeholder="412 messages" style={styles.input} placeholderTextColor="#666" />
+            <TextInput placeholder={`${ctx.messageCount} messages`}
+                value={ctx.text}
+                onChangeText={val => ctx.setText(val)}
+                style={styles.input}
+                placeholderTextColor="#666" />
+            <Icon
+                name='close'
+                size={32}
+                onPress={() => clear()}
+                type='evilicon'
+                color='gray' />
         </View>
     );
 }
@@ -28,7 +46,7 @@ const styles = StyleSheet.create({
     input: {
         color: '#666',
         flex: 1
-    }
+    },
 });
 
 export default Search;

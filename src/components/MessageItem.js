@@ -29,7 +29,6 @@ const MessageItem = ({ navigation, item }) => {
 }
 
 const styles = StyleSheet.create({
-    //messageItem
     wrapper: {
         flexDirection: 'row',
         marginBottom: 10,
@@ -40,9 +39,9 @@ const styles = StyleSheet.create({
         alignItems: 'center', justifyContent: 'center'
     },
     image: {
-        width: 30,
-        height: 30,
-        borderRadius: 30
+        width: 40,
+        height: 40,
+        borderRadius: 40
     },
     textWrapper: {
         flex: 1, paddingHorizontal: 10
