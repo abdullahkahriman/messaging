@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements'
-import MessageItems from '../components/MessageItems';
 import Search from '../components/Search';
 import Header from '../components/Header';
+import MessageItems from '../components/messageItems/MessageItems';
 
 const HomeView = ({ navigation }) => {
     return (

@@ -1,21 +1,49 @@
-import * as React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, AppRegistry } from 'react-native';
 import Moment from 'moment';
 
-const MessageDetailItem = ({ navigation, item }) => {
-    Moment.locale('en');
+export default class MessageDetailItem extends Component {
+    constructor(props) {
+        Moment.locale('en');
+        super(props);
 
-    return (
-        <View style={styles.container}>
-            <Text style={styles.textDate}>{Moment(item.date).format('hh:mm')}</Text>
-            <TouchableOpacity>
-                <View style={styles.itemWrapper}>
-                    <Text style={styles.itemText}>{item.text}</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
-    )
+        console.log("ok");
+        console.log(props)
+
+        this.state = {
+            navigation: props.navigation,
+            item: props.item,
+        }
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.textDate}>{Moment(this.state.item.date).format('hh:mm')}</Text>
+                <TouchableOpacity>
+                    <View style={styles.itemWrapper}>
+                        <Text style={styles.itemText}>{this.state.item.text}</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+        )
+    }
 }
+
+// const MessageDetailItem = ({ navigation, item }) => {
+//     Moment.locale('en');
+
+//     return (
+//         <View style={styles.container}>
+//             <Text style={styles.textDate}>{Moment(item.date).format('hh:mm')}</Text>
+//             <TouchableOpacity>
+//                 <View style={styles.itemWrapper}>
+//                     <Text style={styles.itemText}>{item.text}</Text>
+//                 </View>
+//             </TouchableOpacity>
+//         </View>
+//     )
+// }
 
 const styles = StyleSheet.create({
     container: {
@@ -39,4 +67,6 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MessageDetailItem;
+// export default MessageDetailItem;
+
+AppRegistry.registerComponent('MessageDetailItem', () => MessageDetailItem);

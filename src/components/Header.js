@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     headerWrapper: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#fff'
     },
     headerText: {
         flex: 1,

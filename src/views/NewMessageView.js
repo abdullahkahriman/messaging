@@ -3,6 +3,7 @@ import { View, StyleSheet, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements'
 import Header from '../components/Header';
 import MessageInput from '../components/MessageInput';
+import ReceiverInput from '../components/ReceiverInput';
 
 const NewMessageView = ({ navigation }) => {
     return (
@@ -12,10 +13,7 @@ const NewMessageView = ({ navigation }) => {
                 <Header text="New Message" isBack={true} navigation={navigation} />
 
                 {/* Receiver message */}
-                <View style={styles.receiverWrapper}>
-                    <TextInput style={styles.receiverInput} autoFocus={true} placeholder="Receiver:" placeholderTextColor="#666" />
-                    <Icon onPress={() => alert("Find users...")} type="evilicon" style={styles.receiverIcon} name="search" size={32} color="#666" />
-                </View>
+                <ReceiverInput />
             </View>
 
             {/* Message input */}
@@ -32,20 +30,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-    },
-    receiverWrapper: {
-        marginVertical: 30,
-        backgroundColor: '#fff',
-        flexDirection: 'row',
-        height: 40,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-        alignItems: 'center'
-    },
-    receiverInput: {
-        flex: 1,
-        fontSize: 15,
-        color: '#666'
     },
 })
 

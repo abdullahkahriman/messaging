@@ -27,7 +27,8 @@ const MessageDetailItems = ({ route, navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 20
+        marginVertical: 20,
+        backgroundColor: '#fff'
     }
 });
 

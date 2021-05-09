@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
 import Header from '../components/Header';
 import MessageDetailItems from '../components/messageDetailItems/MessageDetailItems';
 import MessageInput from '../components/MessageInput';
+
+const { height } = Dimensions.get('screen');
 
 const MessageDetailView = ({ route, navigation }) => {
 
@@ -10,7 +12,7 @@ const MessageDetailView = ({ route, navigation }) => {
 
     return (
         <View style={styles.container}>
-            <View style={{ paddingHorizontal: 20, paddingVertical: 20 }}>
+            <View style={styles.padding}>
                 {/* Header */}
                 <Header text={name} isBack={true} navigation={navigation} />
 
@@ -29,6 +31,11 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
     },
+    padding: {
+        paddingHorizontal: 20,
+        paddingVertical: 20,
+        height: (height - 90)
+    }
 })
 
 export default MessageDetailView;

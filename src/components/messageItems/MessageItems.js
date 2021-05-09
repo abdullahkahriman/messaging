@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, View } from 'react-native';
 import MessageItem from './MessageItem';
 
-import { MainContext } from '../provider/MainProvider'
+import { MainContext } from '../../provider/MainProvider'
 
 const MessageItems = ({ navigation }) => {
     const ctx = React.useContext(MainContext);
@@ -30,7 +30,7 @@ const MessageItems = ({ navigation }) => {
     }
 
     return (
-        <View>
+        <View style={{ paddingBottom: 10 }}>
             {isLoading ? <ActivityIndicator size="large" color="#333" /> : <FlatList data={data} renderItem={renderMessageList} keyExtractor={item => item.id} />}
         </View>
     )

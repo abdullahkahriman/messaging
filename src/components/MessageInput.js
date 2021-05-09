@@ -1,14 +1,22 @@
 import * as React from 'react';
-import { View, StyleSheet, TextInput } from 'react-native';
+import { Component } from 'react';
+import { View, StyleSheet, TextInput, AppRegistry } from 'react-native';
 import { Icon } from 'react-native-elements'
 
-const MessageInput = () => {
-    return (
-        <View style={styles.wrapper}>
-            <TextInput placeholder="Text Message" style={styles.textInput} placeholderTextColor="#666" />
-            <Icon onPress={() => alert("Send message")} size={48} type="evilicon" name="chevron-up" style={styles.icon} />
-        </View>
-    );
+export default class MessageInput extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <View style={styles.wrapper} >
+                <TextInput placeholder="Text Message"
+                    style={styles.textInput}
+                    placeholderTextColor="#666" />
+                <Icon onPress={() => alert("Send message")} size={48} type="evilicon" name="chevron-up" style={styles.icon} />
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
@@ -40,4 +48,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MessageInput;
+AppRegistry.registerComponent('MessageInput', () => MessageInput);
